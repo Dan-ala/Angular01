@@ -30,21 +30,18 @@ constructor(
 
             if (userFound) {
                 alert(`Welcome ${this.lulo.username}`);
-            } else {
-                alert('Incorrect username or password');
+                this.router.navigateByUrl('/dashboard')
+            }else {
+                alert('Incorrect username or password or does not exist');
+                this.router.navigateByUrl('/signup')
             }
         } else {
             alert('User array is empty');
         }
-    } else {
-        alert('User does not exist');
     }
 }
 
-
-clic(){
-  console.log("helou");
-  this.router.navigateByUrl("/registrar")
-  
+goToSignUp(){
+  this.router.navigateByUrl('/signup')
 }
 }
