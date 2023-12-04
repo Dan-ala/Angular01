@@ -40,14 +40,17 @@ constructor(public router:Router){}
 
         }
         else if (users.length > 0) {
-            const userFound = users.some((user: any) => 
+            const userFound = users.some((user: any) =>
             this.lulo.username === user.username && this.lulo.password === user.password);
 
             if (userFound) {
                 alert(`Welcome ${this.lulo.username}`);
                 this.router.navigateByUrl('/dashboard')
             }else {
-                alert('Incorrect username or password or does not exist');
+              Swal.fire({
+                title: "Incorrect username or password or does not exist",
+                icon: "error"
+              });
                 this.router.navigateByUrl('/signup')
             }
         }else {

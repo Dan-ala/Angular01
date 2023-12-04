@@ -1,0 +1,125 @@
+/*SIDEBAR*/
+h2{
+  color: #000000;
+}
+
+h5{
+  right: 50px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.mx-2{
+  color: #0a0909;
+  cursor: pointer;
+}
+
+i{
+  color: #fff;
+}
+
+ul {
+  display: flex;
+}
+
+li{
+  margin-top: 12px;
+  margin-left: 50px;
+}
+
+
+li {
+  display: inline;
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    display: block;
+  }
+
+  li {
+    display: block;
+  }
+}
+
+.nav{
+  background-color: #616b8f;
+}
+
+.principal{
+  background-color: rgb( 33, 41, 66 );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: fit-content;
+  margin: 25px;
+}
+
+
+#U{
+  background-color: #616b8f;
+  height: 188px;
+  width: 260px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+#logOut{
+  margin-top: 12px;
+  margin-left: 75px;
+}
+
+#logo{
+  margin-left: 45px;
+  margin-top: 6px;
+}
+
+.text-dark{
+  margin-top: -50px;
+  margin-left: 10px;
+}
+
+#searchBar{
+  float: right;
+  margin-right: 10px;
+}
+
+#sBar{
+  color: black;
+  margin-left: 625px;
+}
+
+img{
+  width: 230px;
+}
+
+.image{
+  margin-top: 15px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  margin-left: 3px;
+  bottom: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 230px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 50;
+}

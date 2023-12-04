@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-</head>
-<body>
 
-    <form>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" [(ngModel)]="lulo.username">
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" [(ngModel)]="lulo.password">
-        </div>
-
-        <button (click)="onSignIn()">LOG IN</button>
-        <br><br>
-        <button (click)="goToSignUp()">CREATE AN ACCOUNT</button>
-    </form>
-    
-</body>
-</html>
+  <div class="animated bounceInDown">
+    <div class="container">
+      <form name="form1" class="box">
+        <h4>Log <span>In</span></h4>
+        <h5>Sign in to your account.</h5>
+          <input type="text" name="username" placeholder="Username" id="username" autocomplete="off" [(ngModel)]="lulo.username">
+          <i class="typcn typcn-eye" id="eye"></i>
+          <input type="password" name="password" placeholder="Passsword" id="password" autocomplete="off" [(ngModel)]="lulo.password">
+          <button (click)="onSignIn()" class="btn1">Sign in</button>
+        </form>
+          <button (click)="goToSignUp()" class="dnthave">Don’t have an account? Sign up</button>
+    </div>
+  </div>

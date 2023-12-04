@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Form</title>
-</head>
-<body>
 
-    <form>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="name" name="username" placeholder="Username" [(ngModel)]="userSignUpObject.username">
-        </div>
-        <div>
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="E-mail"  [(ngModel)]="userSignUpObject.email">
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Password"  [(ngModel)]="userSignUpObject.password">
-        </div>
-
-        <button (click)="onSignUp()">SEND</button>
-        <br><br>
-        <button (click)="goToSignIn()">LOG IN</button>
-    </form>
-    
-</body>
-</html>
+    <div class="animated bounceInDown">
+        <div class="container">
+          <form name="form1" class="box2">
+            <h4>Sign <span>Up</span></h4>
+            <h5>Sign up now and become one of us!</h5>
+            <input type="text" id="name" name="username" placeholder="Username" autocomplete="off" [(ngModel)]="userSignUpObject.username">
+            <input type="text" id="email" name="email" placeholder="E-mail" autocomplete="off" [(ngModel)]="userSignUpObject.email">
+            <input type="password" id="password" name="password" placeholder="Password" autocomplete="off" [(ngModel)]="userSignUpObject.password">
+            <button (click)="onSignUp()" class="btn1">Send</button>
+          </form>
+        <button (click)="goToSignIn()" class="dnthave">Do you have an account? Sign In</button>
+    </div>
+    </div>

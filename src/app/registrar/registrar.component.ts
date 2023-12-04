@@ -11,13 +11,13 @@ export class RegistrarComponent {
 
   constructor(public router:Router){}
 
-  userSignUpObject: any = [{
+  users : any = []
+
+  userSignUpObject: any = {
     username: '',
     email: '',
     password: '',
-  }]
-
-  users: any = [this.userSignUpObject];
+  }
 
 
   onSignUp(){
@@ -60,11 +60,11 @@ export class RegistrarComponent {
         icon: "success"
       });
 
-      // this.userSignUpObject = {
-      //   username: '',
-      //   email: '',
-      //   password: '',
-      // }
+      this.userSignUpObject = {
+        username: '',
+        email: '',
+        password: '',
+      }
     }
     console.log(uP)
     console.log(this.userSignUpObject)
