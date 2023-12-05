@@ -13,6 +13,12 @@ export class LoginComponent {
     username: '',
     password: '',
   }
+
+  admin = {
+    admin: 'Dan',
+    adminPassword: 'Thonan123',
+  }
+  
 constructor(public router:Router){}
 
   onSignIn() {
@@ -46,7 +52,11 @@ constructor(public router:Router){}
             if (userFound) {
                 alert(`Welcome ${this.lulo.username}`);
                 this.router.navigateByUrl('/dashboard')
-            }else {
+            }else if(this.lulo.username === this.admin.admin && this.lulo.password === this.admin.adminPassword){
+              alert(`Welcome ${this.admin.admin}`);
+              this.router.navigateByUrl('/admin-dashboard')  
+            }
+            else {
               Swal.fire({
                 title: "Incorrect username or password or does not exist",
                 icon: "error"

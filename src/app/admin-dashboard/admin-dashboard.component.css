@@ -1,0 +1,335 @@
+/*SIDEBAR*/
+h2{
+    color: #000000;
+  }
+  
+  h5{
+    right: 50px;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .mx-2{
+    color: #0a0909;
+    cursor: pointer;
+  }
+  
+  i{
+    color: #fff;
+  }
+  
+  ul {
+    display: flex;
+  }
+  
+  li{
+    margin-top: 12px;
+    margin-left: 50px;
+  }
+  
+  
+  li {
+    display: inline;
+  }
+  
+  @media screen and (max-width: 767px) {
+    ul {
+      display: block;
+    }
+  
+    li .search_bx2{
+      display: block;
+    }
+  }
+  
+  .nav{
+    background-color: #616b8f;
+  }
+  
+  .principal{
+    background-color: rgb( 33, 41, 66 );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 25px;
+  }
+  
+  
+  #U{
+    background-color: #616b8f;
+    height: 188px;
+    width: 260px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #logOut{
+    margin-top: 12px;
+    margin-left: 75px;
+  }
+  
+  #logo{
+    margin-left: 45px;
+    margin-top: 6px;
+  }
+  
+  .text-dark{
+    margin-top: -70px;
+    margin-left: 10px;
+  }
+  
+  #searchBar{
+    float: right;
+    margin-right: 10px;
+  }
+  
+  #sBar{
+    color: black;
+    margin-left: 625px;
+  }
+  
+  img{
+    width: 230px;
+  }
+  
+  .image{
+    margin-top: 15px;
+  }
+  
+  .container {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    margin-left: 3px;
+    bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 230px;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .container:hover .overlay {
+    opacity: 50;
+  }
+  
+  #doctor, #engineer, #journalist{
+    height: 81.7%;
+  }
+  
+  /*Search bar Styles*/
+  .search_bx2{
+    position: absolute;
+    border: 1px solid black;
+    width: 238px;
+    height: 50px;
+    top: 12.5%;
+    left: 60.5%;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .search_bx2::-webkit-scrollbar{
+    background: black;
+    border-radius: 40px;
+    width: 5px;
+  }
+  
+  .search_bx2 a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+  }
+  
+  .search_bx2 a:hover{
+    background: rgb(184, 184, 184, .6);
+  }
+  
+  .search_bx2 a .driver {
+    width: 92px;
+    height: 48.8px;
+  }
+  
+  .search_bx2 a .content2{
+    color: #000000;
+  }
+  
+  .search_bx2 a .content2 h6{
+    font-size: 13px;
+    margin-top: 25%;
+    margin-left: 20%;
+  }
+  
+  .search_bx2 a .content2 p{
+    color: purple;
+    font-size: 11px;
+    margin-left: 20%;
+  }
+
+
+
+  *, *:after, *:before {
+	box-sizing: border-box;
+}
+
+:root {
+	--c-action-primary: #2e44ff;
+	--c-action-primary-accent: #e9e5ff;
+	--c-action-secondary: #e5e5e5;
+	--c-text-primary: #0d0f21; 
+	--c-text-secondary: #6a6b76;
+	--c-background-primary: #d0d1de;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	color: var(--c-text-primary);
+	background-color: var(--c-background-primary);	
+	line-height: 1.5;
+}
+
+input, button, select, textarea {
+	font: inherit;
+}
+
+.modal {
+	width: 90%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	background-color: #FFF;
+	border-radius: .5rem;
+	box-shadow: 0 5px 15px rgba(#000, .2); 
+}
+
+.modal-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1.5rem 1.5rem 1rem;
+}
+
+.logo-circle {
+	width: 3.5rem;
+	height: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--c-action-primary-accent);
+	svg {
+		max-width: 1.5rem;
+	}
+}
+
+.btn-close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: .25rem;
+	border: none;
+	background-color: transparent;
+	&:hover, &:focus {
+		background-color: var(--c-action-primary-accent);
+	}
+}
+
+.modal-body {
+	padding: 1rem 1.5rem;
+}
+
+.modal-title {
+	font-weight: 700;
+}
+
+.modal-description {
+	color: var(--c-text-secondary);
+}
+
+.upload-area {
+	margin-top: 1.25rem;
+	border: none;
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ccc' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	background-color: transparent;
+	padding: 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:hover, &:focus {
+			background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232e44ff' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	}
+} 
+
+.upload-area-icon {
+	display: block;
+	width: 2.25rem;
+	height: 2.25rem;
+	svg {
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+.upload-area-title {
+	margin-top: 1rem;
+	display: block;
+	font-weight: 700;
+		color: var(--c-text-primary);
+}
+
+.upload-area-description {
+		display: block;
+		color: var(--c-text-secondary);
+	strong {
+		color: var(--c-action-primary);
+		font-weight: 700;
+	}
+}
+
+.modal-footer {
+	padding: 1rem 1.5rem 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	[class*="btn-"] {
+		margin-left: .75rem;
+	}
+}
+
+.btn-secondary, .btn-primary {
+	padding: .5rem 1rem;
+	font-weight: 500;
+	border: 2px solid var(--c-action-secondary);
+	border-radius: .25rem;
+	background-color: transparent;
+}
+
+.btn-primary {
+	color: #FFF;
+	background-color: var(--c-action-primary);
+	border-color: var(--c-action-primary);
+}

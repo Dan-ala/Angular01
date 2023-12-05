@@ -1,0 +1,73 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- BOX ICONS CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+    <!-- custom css -->
+
+    <!-- Side-Nav -->
+    <div class="nav">
+      <h2 id="logo">Agencia de Empleo</h2>
+      <ul>
+        <li>
+          <i class="bx bx-user-check"></i>
+          <span class="mx-2">Profile</span>
+        </li>
+        <li>
+          <div class="search">
+            <input type="text" placeholder="Buscar Empresa..." id="search" [(ngModel)]="newCompany" autofocus>
+            <i class='bx bx-search-alt'></i>
+            <div class="search_bx2">
+              <!-- <a href="#">
+                <img src="../assets/img/driver.jpg" alt="driver" class="driver">
+                <div class="content2">
+                  <h6>Profesión</h6>
+                  <p>Driver</p>
+                </div>
+              </a> -->
+            </div>
+          </div>
+        </li>
+
+          <h5 id="logOut" (click)="goToSignIn()">Log Out</h5>
+
+      </ul>
+    </div>
+    <br><br><br>
+
+    <h3 class="text-dark p-3">Admin Dashboard</h3>
+
+    <div class="newCompany">
+        <div>
+            <input type="text" placeholder="Enter company name" name="companyName" [(ngModel)]="newCompany.companyName">
+        </div>
+        <div>
+            <input type="text" placeholder="Enter the city" name="city" [(ngModel)]="newCompany.city"> 
+        </div>
+        <div>
+            <input type="number" placeholder="Enter the wages" name="wages" [(ngModel)]="newCompany.wages"> 
+        </div>
+        <div>
+            <input type="text" placeholder="Requirement" name="requirement" id="requirement" [(ngModel)]="newCompany.requirement">
+        </div>
+        <div>
+            <input type="text" placeholder="Type Of Employment" name="typeOfEmployment" id="typeOfEmployment" [(ngModel)]="newCompany.typeOfEmployment">
+        </div>
+        <div>
+            <input type="date" placeholder="Post Date" name="postedDate" id="postedDate" [(ngModel)]="newCompany.postedDate">
+        </div>
+        <div>
+            <input type="file" placeholder="Upload your Company Image" name="companyImg" (change)="handleFileInput($event)">
+        </div>
+        <div>
+            <button (click)="newCompanyForm()">Submit</button>
+        </div>
+    </div>
+
+    <div class="principal">
+        <div class="container" *ngFor="let company of companies">
+          <img [src]="company.companyImgUrl" alt="company" class="image">
+          <div class="overlay">
+            <h6>{{ company.companyName }}</h6>
+          </div>
+        </div>
+      </div>
