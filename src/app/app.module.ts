@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { DriverComponent } from './driver/driver.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DoctorComponent } from './doctor/doctor.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     LoginComponent,
     RegistrarComponent,
     DashboardComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    DriverComponent,
+    DoctorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

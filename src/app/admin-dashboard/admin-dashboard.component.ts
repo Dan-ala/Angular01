@@ -17,6 +17,7 @@ export class AdminDashboardComponent implements OnInit {
     wages: '',
     requirement: '',
     typeOfEmployment: '',
+    profession: '',
     postedDate: '',
     companyImgUrl: ''
   };

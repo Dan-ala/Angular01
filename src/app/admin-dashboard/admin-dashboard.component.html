@@ -76,6 +76,14 @@
                 </select>
               </div>
               <div class="mb-3">
+                <label for="profession" class="col-form-label">Profession:</label>
+                <select class="form-control" name="profession" id="profession" [(ngModel)]="newCompany.profession">
+                  <option value="Driver">Driver</option>
+                  <option value="Doctor">Doctor</option>
+                  <option value="Enginner">Enginner</option>
+                </select>
+              </div>
+              <div class="mb-3">
                 <label for="postedDate" class="col-form-label">Post Date:</label>
                 <input class="form-control" type="date" placeholder="Date" name="postedDate" id="postedDate" [(ngModel)]="newCompany.postedDate">
               </div>

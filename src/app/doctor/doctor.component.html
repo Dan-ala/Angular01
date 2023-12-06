@@ -1,0 +1,68 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- BOX ICONS CSS-->
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+<!-- custom css -->
+
+<!-- Side-Nav -->
+<div class="nav">
+    <h2 id="logo">Agencia de Empleo</h2>
+    <ul>
+        <li>
+            <i class='bx bx-search-alt'></i>
+            <span class="mx-2">Buscar Ofertas</span>
+        </li>
+        <li>
+            <i class="bx bx-user-check"></i>
+            <span class="mx-2">Profile</span>
+        </li>
+        <li>
+            <i class="bx bx-conversation"></i>
+            <span class="mx-2">Contact</span>
+        </li>
+        <li>
+            <div class="search">
+                <input type="text" placeholder="Buscar Profesión..." id="search" [(ngModel)]="searchBarFilter.value"
+                    autofocus>
+                <i class="fas fa-search" id="search_icon"></i>
+                <div class="search_bx2">
+                    <!-- <a href="#">
+                <img src="../assets/img/driver.jpg" alt="driver" class="driver">
+                <div class="content2">
+                  <h6>Profesión</h6>
+                  <p>Driver</p>
+                </div>
+              </a> -->
+                </div>
+            </div>
+        </li>
+
+        <h5 id="logOut" (click)="goToSignIn()">Log Out</h5>
+
+    </ul>
+</div>
+<br><br><br>
+<h3 class="text-dark p-3">Ofertas Laborales</h3>
+<div class="options">
+    <div id="ofertas"><h3>Número de ofertas: {{numberOfOffersDoc}}</h3></div>&nbsp;&nbsp;&nbsp;
+    <div id="ofertas"><h3>Número de ofertas aplicadas: {{numOfOffersApplied}}</h3></div>
+  </div>
+  <div class="principal">
+    <div class="container" *ngFor="let company of filteredCompanies; let i = index">
+      <div class="companiesImg">
+        <img [src]="company.companyImgUrl" alt="company" class="image">
+      </div>
+      <div class="overlay">
+        <h6>{{ company.companyName }}</h6>
+        <h6>{{ company.city }}</h6>
+        <h6>{{ company.wages }}</h6>
+        <h6>{{ company.requirement }}</h6>
+        <h6>{{ company.typeOfEmployment }}</h6>
+        <h6>{{ company.postedDate }}</h6>
+        <button (click)="ofertasAplicadas()" class="btn btn-success">Apply</button>&nbsp;&nbsp;
+        <button (click)="noPsotularse()" class="btn btn-warning">Delete</button>
+      </div>
+    </div>
+  </div>
+  

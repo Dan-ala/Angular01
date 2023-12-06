@@ -109,4 +109,12 @@ searchBar(){
     }
   })
 }
+
+goToDriver(){
+  this.router.navigateByUrl('/driver')
+}
+
+goToDoctor(){
+  this.router.navigateByUrl('/doctor')
+}
 }

@@ -4,12 +4,16 @@ import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { DashboardComponent } from '../app/dashboard/dashboard.component'
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { DriverComponent } from './driver/driver.component';
+import { DoctorComponent } from './doctor/doctor.component';
 
 const routes: Routes = [
   {path :'', component:LoginComponent},
   {path :'signup', component:RegistrarComponent},
   {path : 'dashboard', component: DashboardComponent},
-  {path: 'admin-dashboard', component: AdminDashboardComponent}
+  {path: 'admin-dashboard', component: AdminDashboardComponent},
+  {path: 'driver', component: DriverComponent},
+  {path: 'doctor', component: DoctorComponent}
 ];
 
 

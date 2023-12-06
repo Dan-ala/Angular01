@@ -1,0 +1,205 @@
+/*SIDEBAR*/
+h2{
+    color: #000000;
+  }
+  
+  h5{
+    right: 50px;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .mx-2{
+    color: #0a0909;
+    cursor: pointer;
+  }
+  
+  i{
+    color: #fff;
+  }
+  
+  ul {
+    display: flex;
+  }
+  
+  li{
+    margin-top: 12px;
+    margin-left: 50px;
+  }
+  
+  
+  li {
+    display: inline;
+  }
+  
+  @media screen and (max-width: 767px) {
+    ul {
+      display: block;
+    }
+  
+    li .search_bx2{
+      display: block;
+    }
+  }
+  
+  .nav{
+    background-color: #616b8f;
+  }
+  
+  .principal{
+    background-color: rgb( 33, 41, 66 );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 25px;
+  }
+  
+  
+  #U{
+    background-color: #616b8f;
+    height: 188px;
+    width: 260px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #logOut{
+    margin-top: 12px;
+    margin-left: 75px;
+  }
+  
+  #logo{
+    margin-left: 45px;
+    margin-top: 6px;
+  }
+  
+  .text-dark{
+    margin-top: -70px;
+    margin-left: 10px;
+  }
+  
+  #searchBar{
+    float: right;
+    margin-right: 10px;
+  }
+  
+  #sBar{
+    color: black;
+    margin-left: 625px;
+  }
+  
+  img{
+    width: 230px;
+  }
+  
+  .image{
+    margin-top: 15px;
+    height: 110px;
+    width: auto;
+    margin-left: 70px;
+  }
+  
+  .container {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    border: 5px solid none;
+    height: 380px;
+  }
+
+  .companiesImg{
+    background-color: none;
+    height: 150px;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    margin-left: 18px;
+    bottom: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 230px;
+    /* transition: .5s ease; */
+    /* opacity:0; */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .container:hover .overlay {
+    opacity: 50;
+  }
+  
+  /*Search bar Styles*/
+  .search_bx2{
+    position: absolute;
+    border: 1px solid black;
+    width: 238px;
+    height: 50px;
+    top: 12.5%;
+    left: 60.5%;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .search_bx2::-webkit-scrollbar{
+    background: black;
+    border-radius: 40px;
+    width: 5px;
+  }
+  
+  .search_bx2 a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+  }
+  
+  .search_bx2 a:hover{
+    background: rgb(184, 184, 184, .6);
+  }
+  
+  .search_bx2 a .driver {
+    width: 92px;
+    height: 48.8px;
+  }
+  
+  .search_bx2 a .content2{
+    color: #000000;
+  }
+  
+  .search_bx2 a .content2 h6{
+    font-size: 13px;
+    margin-top: 25%;
+    margin-left: 20%;
+  }
+  
+  .search_bx2 a .content2 p{
+    color: purple;
+    font-size: 11px;
+    margin-left: 20%;
+  }
+
+
+  .options{
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+  }
+
+  #ofertas{
+    background-color: #616b8f;
+    width: fit-content;
+  }
