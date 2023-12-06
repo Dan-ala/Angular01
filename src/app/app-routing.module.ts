@@ -6,6 +6,7 @@ import { DashboardComponent } from '../app/dashboard/dashboard.component'
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { DriverComponent } from './driver/driver.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { EngineerComponent } from './engineer/engineer.component';
 
 const routes: Routes = [
   {path :'', component:LoginComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path : 'dashboard', component: DashboardComponent},
   {path: 'admin-dashboard', component: AdminDashboardComponent},
   {path: 'driver', component: DriverComponent},
-  {path: 'doctor', component: DoctorComponent}
+  {path: 'doctor', component: DoctorComponent},
+  {path: 'engineer', component: EngineerComponent}
 ];
 
 

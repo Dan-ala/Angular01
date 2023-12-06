@@ -11,6 +11,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { DriverComponent } from './driver/driver.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DoctorComponent } from './doctor/doctor.component';
+import { EngineerComponent } from './engineer/engineer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DoctorComponent } from './doctor/doctor.component';
     DashboardComponent,
     AdminDashboardComponent,
     DriverComponent,
-    DoctorComponent
+    DoctorComponent,
+    EngineerComponent
   ],
   imports: [
     BrowserModule,
