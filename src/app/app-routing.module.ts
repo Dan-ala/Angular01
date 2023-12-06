@@ -1,3 +1,4 @@
+import { JournalistComponent } from './journalist/journalist.component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'admin-dashboard', component: AdminDashboardComponent},
   {path: 'driver', component: DriverComponent},
   {path: 'doctor', component: DoctorComponent},
-  {path: 'engineer', component: EngineerComponent}
+  {path: 'engineer', component: EngineerComponent},
+  {path: 'journalist', component: JournalistComponent}
 ];
 
 

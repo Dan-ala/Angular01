@@ -121,4 +121,8 @@ goToDoctor(){
 goToEngineer(){
   this.router.navigateByUrl('/engineer')
 }
+
+goToJournalist(){
+  this.router.navigateByUrl('/journalist')
+}
 }
