@@ -4,7 +4,7 @@
           <form name="form1" class="box2">
             <h4>Sign <span>Up</span></h4>
             <h5>Sign up now and become one of us!</h5>
-            <input type="text" id="name" name="username" placeholder="Username" autocomplete="off" [(ngModel)]="userSignUpObject.username">
+            <input type="text" id="name" name="username" placeholder="Username" autocomplete="off" [(ngModel)]="userSignUpObject.username" autofocus>
             <input type="text" id="email" name="email" placeholder="E-mail" autocomplete="off" [(ngModel)]="userSignUpObject.email">
             <input type="password" id="password" name="password" placeholder="Password" autocomplete="off" [(ngModel)]="userSignUpObject.password">
             <button (click)="onSignUp()" class="btn1">Send</button>

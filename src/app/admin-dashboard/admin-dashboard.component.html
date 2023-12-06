@@ -14,7 +14,7 @@
         </li>
         <li>
           <div class="search">
-            <input type="text" placeholder="Buscar Empresa..." id="search" [(ngModel)]="newCompany" autofocus>
+            <input type="text" placeholder="Buscar Empresa..." id="search" [(ngModel)]="newCompany.companyName" autofocus>
             <i class='bx bx-search-alt'></i>
             <div class="search_bx2">
               <!-- <a href="#">
@@ -33,41 +33,79 @@
       </ul>
     </div>
     <br><br><br>
-
     <h3 class="text-dark p-3">Admin Dashboard</h3>
-
-    <div class="newCompany">
-        <div>
-            <input type="text" placeholder="Enter company name" name="companyName" [(ngModel)]="newCompany.companyName">
+    <div class="options">
+      <button id="modal" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Add a Company</button>&nbsp;&nbsp;&nbsp;
+      <button (click)="deleteAllCompanies()" id="modal" type="button" class="btn btn-danger">Delete All Companies</button>
+    </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Company Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form >
+              <div class="mb-3">
+                <label for="companyName" class="col-form-label">Enter company name:</label>
+                <input type="text" class="form-control" placeholder="Name" name="companyName" [(ngModel)]="newCompany.companyName">
+              </div>
+              <div class="mb-3">
+                <label for="city" class="col-form-label">Enter the city</label>
+                <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="newCompany.city">
+              </div>
+              <div class="mb-3">
+                <label for="wages" class="col-form-label">Enter the wages</label>
+                <input type="number" class="form-control" placeholder="Wages" name="wages" [(ngModel)]="newCompany.wages">
+              </div>
+              <div class="mb-3">
+                <label for="requirement" class="col-form-label">Requirements:</label>
+                <textarea class="form-control" placeholder="Requirement" name="requirement" id="requirement" [(ngModel)]="newCompany.requirement"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="typeOfEmployment" class="col-form-label">Type Of Employment:</label>
+                <select class="form-control" name="typeOfEmployment" id="typeOfEmployment" [(ngModel)]="newCompany.typeOfEmployment">
+                  <option value="Full time">Full time</option>
+                  <option value="Part time">Part time</option>
+                  <option value="Seasonal">Seasonal</option>
+                  <option value="Temporary">Temporary</option>
+                  <option value="Intership">Intership</option>
+                  <option value="At will">At will</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="postedDate" class="col-form-label">Post Date:</label>
+                <input class="form-control" type="date" placeholder="Date" name="postedDate" id="postedDate" [(ngModel)]="newCompany.postedDate">
+              </div>
+              <div class="mb-3">
+                <label for="companyImg">Upload your Company Image:</label>
+                <input class="form-control" type="file" name="companyImg" (change)="handleFileInput($event)">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button (click)="newCompanyForm()" class="btn btn-primary">Send</button>
+          </div>
         </div>
-        <div>
-            <input type="text" placeholder="Enter the city" name="city" [(ngModel)]="newCompany.city"> 
-        </div>
-        <div>
-            <input type="number" placeholder="Enter the wages" name="wages" [(ngModel)]="newCompany.wages"> 
-        </div>
-        <div>
-            <input type="text" placeholder="Requirement" name="requirement" id="requirement" [(ngModel)]="newCompany.requirement">
-        </div>
-        <div>
-            <input type="text" placeholder="Type Of Employment" name="typeOfEmployment" id="typeOfEmployment" [(ngModel)]="newCompany.typeOfEmployment">
-        </div>
-        <div>
-            <input type="date" placeholder="Post Date" name="postedDate" id="postedDate" [(ngModel)]="newCompany.postedDate">
-        </div>
-        <div>
-            <input type="file" placeholder="Upload your Company Image" name="companyImg" (change)="handleFileInput($event)">
-        </div>
-        <div>
-            <button (click)="newCompanyForm()">Submit</button>
-        </div>
+      </div>
     </div>
 
     <div class="principal">
-        <div class="container" *ngFor="let company of companies">
+        <div class="container" *ngFor="let company of companies; let i = index">
           <img [src]="company.companyImgUrl" alt="company" class="image">
           <div class="overlay">
+            <h6>{{i+1}}</h6>
             <h6>{{ company.companyName }}</h6>
+            <h6>{{ company.city }}</h6>
+            <h6>{{ company.wages }}</h6>
+            <h6>{{ company.requirement }}</h6>
+            <h6>{{ company.typeOfEmployment }}</h6>
+            <h6>{{ company.postedDate }}</h6>
+            <button (click)="onUpdate(i)" id="modal" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" class="btn btn-primary">Update</button>&nbsp;&nbsp;
+            <button (click)="deleteCompany(i)" class="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>

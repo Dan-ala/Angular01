@@ -74,7 +74,6 @@ searchBar(){
 
   let search_bx2 = document.getElementsByClassName('search_bx2')[0]
 
-  window.addEventListener('load',()=>{
     professions.forEach(element => {
       const {img, title, name, url} = element
       let card = document.createElement('a')
@@ -86,7 +85,6 @@ searchBar(){
       </div>`;
       search_bx2.appendChild(card)
     });
-  })
 
   let search = document.getElementById('search')
   search?.addEventListener('keyup',()=>{

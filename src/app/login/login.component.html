@@ -4,7 +4,7 @@
       <form name="form1" class="box">
         <h4>Log <span>In</span></h4>
         <h5>Sign in to your account.</h5>
-          <input type="text" name="username" placeholder="Username" id="username" autocomplete="off" [(ngModel)]="lulo.username">
+          <input type="text" name="username" placeholder="Username" id="username" autofocus autocomplete="off" [(ngModel)]="lulo.username">
           <i class="typcn typcn-eye" id="eye"></i>
           <input type="password" name="password" placeholder="Passsword" id="password" autocomplete="off" [(ngModel)]="lulo.password">
           <button (click)="onSignIn()" class="btn1">Sign in</button>
