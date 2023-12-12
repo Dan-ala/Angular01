@@ -15,7 +15,7 @@ export class JournalistComponent {
     companyId: 0,
     companyName: '',
     city: '',
-    wages: '',
+    wages: 0,
     requirement: '',
     typeOfEmployment: '',
     profession: 'Journalist',
@@ -25,8 +25,10 @@ export class JournalistComponent {
 
   numberOfOffers: number = 0
   numOfOffersApplied: number = 0
+  numberOfWages: any
 
   filteredCompanies: any = []
+  filteredCompanies2: any[] = []
 constructor(public router:Router){
   const storedValue = localStorage.getItem('offfersAppliedJournalist')
   if(storedValue){
@@ -42,14 +44,22 @@ ngOnInit(){
   const storedCompanies = localStorage.getItem('c')
   if(storedCompanies){
     this.companies = JSON.parse(storedCompanies)
-    this.journalistFilter()
+    this.filterCompaniesByWages()
   }
   this.numberOfOffers = this.filteredCompanies.length
+  this.numberOfWages = this.filteredCompanies2.length
 
 }
 
-journalistFilter(){
-  this.filteredCompanies = this.companies.filter((company: any) => company.profession == 'Journalist')
+filterCompaniesByWages() {
+  const profesion = this.filteredCompanies = this.companies.filter((company: any) => company.profession === 'Journalist')
+  const uniqueWages = Array.from(new Set(profesion.map((company: any) => company.wages)));
+  this.filteredCompanies2 = uniqueWages.map((wage: any) => {
+    return {
+      wages: wage,
+      count: profesion.filter((company: any) => company.wages === wage).length
+    };
+  });
 }
 
 ofertasAplicadas(){

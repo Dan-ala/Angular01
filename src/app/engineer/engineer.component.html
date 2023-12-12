@@ -1,13 +1,6 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-<!-- BOX ICONS CSS-->
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
-<!-- custom css -->
-
 <!-- Side-Nav -->
 <div class="nav">
-    <h2 id="logo">Agencia de Empleo</h2>
+    <a href="/dashboard"><h2 id="logo">Agencia de Empleo</h2></a>
     <ul>
         <li>
             <i class='bx bx-search-alt'></i>
@@ -37,31 +30,56 @@
                 </div>
             </div>
         </li>
-
         <h5 id="logOut" (click)="goToSignIn()">Log Out</h5>
-
     </ul>
 </div>
 <br><br><br>
-<h3 class="text-dark p-3">Ofertas Laborales Engineer</h3>
+<h3 class="text-dark p-3">Ofertas Laborales Engineer 👷🏻‍♀️👷🏻‍♂️😎🏗</h3>
 <div class="options">
-    <div id="ofertas"><h3>Número de ofertas: {{numberOfOffers}}</h3></div>&nbsp;&nbsp;&nbsp;
-    <div id="ofertas"><h3>Número de ofertas aplicadas: {{numOfOffersApplied}}</h3></div>
+    <div id="ofertas">
+        <h3>Número de ofertas: {{numberOfOffers}}</h3>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div id="ofertas">
+        <h3>Número de ofertas aplicadas: {{numOfOffersApplied}}</h3>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div id="ofertas">
+        <h3>Tipos de sueldo: {{numberOfWages}}</h3>
+    </div>
   </div>
-<div class="principal">
-        <div class="container" *ngFor="let company of filteredCompanies; let i = index">
-            <div class="companiesImg">
-                <img [src]="company.companyImgUrl" alt="company" class="image">
-            </div>
-            <div class="overlay">
-                <h6>{{ company.companyName }}</h6>
-                <h6>{{ company.city }}</h6>
-                <h6>{{ company.wages }}</h6>
-                <h6>{{ company.requirement }}</h6>
-                <h6>{{ company.typeOfEmployment }}</h6>
-                <h6>{{ company.postedDate }}</h6>
-                <button (click)="ofertasAplicadas()" class="btn btn-success">Apply</button>&nbsp;&nbsp;
-                <button (click)="noPostularse()" class="btn btn-warning">Delete</button>
-            </div>
+  <div class="principal">
+    <div class="container" *ngFor="let company of filteredCompanies; let i = index">
+        <div class="companiesImg">
+            <h6 id="companyName">{{ company.companyName }}</h6>
+            <img [src]="company.companyImgUrl" alt="company" class="image">
         </div>
-</div>
+        <div class="overlay">
+            <h6>{{ company.city }}</h6>
+            <h6>{{ company.wages }}</h6>
+            <h6>{{ company.requirement }}</h6>
+            <h6>{{ company.typeOfEmployment }}</h6>
+            <h6>{{ company.postedDate }}</h6>
+        </div>
+        <button (click)="ofertasAplicadas()" class="btn btn-success">Apply</button>&nbsp;&nbsp;
+        <button (click)="noPostularse()" class="btn btn-warning">Delete</button>
+    </div>
+  </div>
+  
+  <!--Filters-->
+  <div class="filters">
+    <div class="wages">
+        <h5 id="wagesHeader">Salario en millones de pesos</h5>
+        <div class="wages-list" *ngFor="let company of filteredCompanies2; let i = index">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    <h6 class="sueldos">{{ company.wages }}</h6>
+                </label>
+              </div>
+              <div class="wagesNum">
+                <p class="wages">{{company.count}}</p>
+              </div>    
+        </div>
+    </div>
+  </div>
