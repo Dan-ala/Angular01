@@ -44,23 +44,19 @@ ngOnInit() {
 
   if (storedCompanies) {
     this.companies = JSON.parse(storedCompanies);
-    this.filterCompaniesByProfession();
     this.filterCompaniesByWages()
   }
   this.numberOfOffers = this.filteredCompanies.length;
   this.numberOfWages = this.filteredCompanies2.length
 }
 
-filterCompaniesByProfession() {
-  this.filteredCompanies = this.companies.filter((company: any) => company.profession === 'Driver');
-}
-
 filterCompaniesByWages() {
-  const uniqueWages = Array.from(new Set(this.companies.map((company: any) => company.wages)));
+  const profesion = this.filteredCompanies = this.companies.filter((company: any) => company.profession === 'Driver');
+  const uniqueWages = Array.from(new Set(profesion.map((company: any) => company.wages)));
   this.filteredCompanies2 = uniqueWages.map((wage: any) => {
     return {
       wages: wage,
-      count: this.companies.filter((company: any) => company.wages === wage).length
+      count: profesion.filter((company: any) => company.wages === wage).length
     };
   });
 }
