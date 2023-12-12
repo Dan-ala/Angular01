@@ -53,7 +53,7 @@ h2{
     height: fit-content;
     margin: 25px;
     width: 770px;
-    margin-right: 80px;
+    margin-right: 50x;
     float: right;
   }
   
@@ -65,6 +65,10 @@ h2{
   #logo{
     margin-left: 45px;
     margin-top: 6px;
+  }
+
+  a{
+    text-decoration: none;
   }
   
   .text-dark{
@@ -83,10 +87,9 @@ h2{
   }
   
   .image{
-    margin-bottom: 12%;
-    width: 270%;
-    height: auto;
-    margin-left: -180px;
+    margin-bottom: 8%;
+    width: 70%;
+    margin-right: 300px;
   }
   
   .container {
@@ -146,7 +149,7 @@ h2{
   width: max-content;
   top: 18%;
   /* font-size: 22px; */
-  margin-right: 58%;
+  margin-right: 100%;
 }
 
   
@@ -214,4 +217,58 @@ h2{
   #ofertas{
     background-color: #616b8f;
     width: fit-content;
+  }
+
+  /*FILTERS*/
+  .filters{
+    background-color: rgb( 33, 41, 66 );
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 25px;
+    width: 470px;
+    float: left;
+  }
+
+  #wagesHeader{
+    color: #fff;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 3.5%;
+  }
+
+  .wages-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.135);
+    width: 80%;
+    margin-left: 10%;
+    padding: 2%;
+    height: fit-content;
+    margin-bottom: 5%;
+  }
+
+  .wagesNum{
+    background-color: darkgray;
+    margin-left: 70%;
+    height: 25px;
+    width: 45px;
+    text-align: center;
+    border: 0px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .sueldos{
+    color: #fff;
+  }
+
+  .form-check-label{
+    width: max-content;
+  }
+
+  #flexCheckDefault{
+    cursor: pointer;
   }

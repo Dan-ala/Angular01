@@ -12,7 +12,7 @@ export class DriverComponent{
     companyId: 0,
     companyName: '',
     city: '',
-    wages: '',
+    wages: 0,
     requirement: '',
     typeOfEmployment: '',
     profession: 'Driver',
@@ -24,6 +24,9 @@ export class DriverComponent{
   
   numberOfOffers: any
   numOfOffersApplied: number = 0
+
+  filteredCompanies2: any[] = []
+  numberOfWages: any
 
 constructor(public router:Router){
   const storedValue = localStorage.getItem('OffersAppliedDriver');
@@ -42,12 +45,24 @@ ngOnInit() {
   if (storedCompanies) {
     this.companies = JSON.parse(storedCompanies);
     this.filterCompaniesByProfession();
+    this.filterCompaniesByWages()
   }
   this.numberOfOffers = this.filteredCompanies.length;
+  this.numberOfWages = this.filteredCompanies2.length
 }
 
 filterCompaniesByProfession() {
   this.filteredCompanies = this.companies.filter((company: any) => company.profession === 'Driver');
+}
+
+filterCompaniesByWages() {
+  const uniqueWages = Array.from(new Set(this.companies.map((company: any) => company.wages)));
+  this.filteredCompanies2 = uniqueWages.map((wage: any) => {
+    return {
+      wages: wage,
+      count: this.companies.filter((company: any) => company.wages === wage).length
+    };
+  });
 }
 
 countDriverOffers() {

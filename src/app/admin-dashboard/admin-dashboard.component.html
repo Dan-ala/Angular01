@@ -58,7 +58,17 @@
               </div>
               <div class="mb-3">
                 <label for="wages" class="col-form-label">Enter the wages</label>
-                <input type="number" class="form-control" placeholder="Wages" name="wages" [(ngModel)]="newCompany.wages">
+                <select class="form-control" name="wages" id="wages" [(ngModel)]="newCompany.wages">
+                  <option value="$1 a $1,5">$1 a $1,5</option>
+                  <option value="$1,5 a $2">1,5 a $2</option>
+                  <option value="$2 a $2,5">$2 a $2,5</option>
+                  <option value="$2,5 a $3">$2,5 a $3</option>
+                  <option value="$3 a $3,5">$3 a $3,5</option>
+                  <option value="$3,5 a $4">$3,5 a $4</option>
+                  <option value="$4,5 a $5,5">$4,5 a $5,5</option>
+                  <option value="$5,5 a $6">$5,5 a $6</option>
+                  <option value="$6 a $8">$6 a $8</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="requirement" class="col-form-label">Requirements:</label>
