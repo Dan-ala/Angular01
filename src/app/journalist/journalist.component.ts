@@ -48,7 +48,6 @@ ngOnInit(){
   }
   this.numberOfOffers = this.filteredCompanies.length
   this.numberOfWages = this.filteredCompanies2.length
-
 }
 
 filterCompaniesByWages() {

@@ -8,6 +8,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { DriverComponent } from './driver/driver.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { EngineerComponent } from './engineer/engineer.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { PilotComponent } from './pilot/pilot.component';
 
 const routes: Routes = [
   {path :'', component:LoginComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'driver', component: DriverComponent},
   {path: 'doctor', component: DoctorComponent},
   {path: 'engineer', component: EngineerComponent},
-  {path: 'journalist', component: JournalistComponent}
+  {path: 'journalist', component: JournalistComponent},
+  {path: 'teacher', component: TeacherComponent},
+  {path: 'pilot', component: PilotComponent}
 ];
 
 

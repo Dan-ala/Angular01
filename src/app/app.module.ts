@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DoctorComponent } from './doctor/doctor.component';
 import { EngineerComponent } from './engineer/engineer.component';
 import { JournalistComponent } from './journalist/journalist.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { PilotComponent } from './pilot/pilot.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { JournalistComponent } from './journalist/journalist.component';
     DriverComponent,
     DoctorComponent,
     EngineerComponent,
-    JournalistComponent
+    JournalistComponent,
+    TeacherComponent,
+    PilotComponent
   ],
   imports: [
     BrowserModule,

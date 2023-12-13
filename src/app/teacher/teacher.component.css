@@ -1,0 +1,274 @@
+/*SIDEBAR*/
+h2{
+    color: #000000;
+  }
+  
+  h5{
+    right: 50px;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .mx-2{
+    color: #0a0909;
+    cursor: pointer;
+  }
+  
+  i{
+    color: #fff;
+  }
+  
+  ul {
+    display: flex;
+  }
+  
+  li{
+    margin-top: 12px;
+    margin-left: 50px;
+  }
+  
+  
+  li {
+    display: inline;
+  }
+  
+  @media screen and (max-width: 767px) {
+    ul {
+      display: block;
+    }
+  
+    li .search_bx2{
+      display: block;
+    }
+  }
+  
+  .nav{
+    background-color: #616b8f;
+  }
+  
+  .principal{
+    background-color: rgb( 33, 41, 66 );
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 25px;
+    width: 770px;
+    margin-right: 50x;
+    float: right;
+  }
+  
+  #logOut{
+    margin-top: 12px;
+    margin-left: 75px;
+  }
+  
+  #logo{
+    margin-left: 45px;
+    margin-top: 6px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .text-dark{
+    margin-top: -70px;
+    margin-left: 10px;
+  }
+  
+  #searchBar{
+    float: right;
+    margin-right: 10px;
+  }
+  
+  #sBar{
+    color: black;
+    margin-left: 625px;
+  }
+  
+  .image{
+    margin-bottom: 8%;
+    width: 70%;
+    margin-right: 300px;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    display: flex; /* Use flexbox to control layout */
+  }
+  
+  .companiesImg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    margin-left: 58%;
+    bottom: 32%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 288px;
+    height: max-content;
+    /* transition: .5s ease; */
+    /* opacity:0; */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .btn-success{
+  position: absolute;
+  margin-left: 108%;
+  bottom: 8%;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  }
+  
+  .btn-warning{
+  position: absolute;
+  margin-left: 132%;
+  bottom: 8%;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  }
+  
+  #companyName{
+  color: yellow;
+  position: absolute;
+  width: max-content;
+  top: 18%;
+  /* font-size: 22px; */
+  margin-right: 100%;
+  }
+  
+  
+  /*Search bar Styles*/
+  .search_bx2{
+    position: absolute;
+    border: 1px solid black;
+    width: 238px;
+    height: 50px;
+    top: 12.5%;
+    left: 60.5%;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .search_bx2::-webkit-scrollbar{
+    background: black;
+    border-radius: 40px;
+    width: 5px;
+  }
+  
+  .search_bx2 a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+  }
+  
+  .search_bx2 a:hover{
+    background: rgb(184, 184, 184, .6);
+  }
+  
+  .search_bx2 a .driver {
+    width: 92px;
+    height: 48.8px;
+  }
+  
+  .search_bx2 a .content2{
+    color: #000000;
+  }
+  
+  .search_bx2 a .content2 h6{
+    font-size: 13px;
+    margin-top: 25%;
+    margin-left: 20%;
+  }
+  
+  .search_bx2 a .content2 p{
+    color: purple;
+    font-size: 11px;
+    margin-left: 20%;
+  }
+  
+  
+  .options{
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+  }
+  
+  #ofertas{
+    background-color: #616b8f;
+    width: fit-content;
+  }
+  
+  /*FILTERS*/
+  .filters{
+    background-color: rgb( 33, 41, 66 );
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 25px;
+    width: 470px;
+    float: left;
+  }
+  
+  #wagesHeader{
+    color: #fff;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 3.5%;
+  }
+  
+  .wages-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.135);
+    width: 80%;
+    margin-left: 10%;
+    padding: 2%;
+    height: fit-content;
+    margin-bottom: 5%;
+  }
+  
+  .wagesNum{
+    background-color: darkgray;
+    margin-left: 70%;
+    height: 25px;
+    width: 45px;
+    text-align: center;
+    border: 0px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .sueldos{
+    color: #fff;
+  }
+  
+  .form-check-label{
+    width: max-content;
+  }
+  
+  #flexCheckDefault{
+    cursor: pointer;
+  }
